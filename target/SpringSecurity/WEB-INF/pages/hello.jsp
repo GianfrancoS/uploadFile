@@ -6,6 +6,29 @@
 <body>
 	<h1>Title : ${title}</h1>
 	<h1>Message : ${message}</h1>
+	
+<style>
+
+#form {
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 55px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+
+
+}
+</style>
+
+
+
+
+
+
 
 	<sec:authorize access="hasRole('ROLE_USER')">
 		<!-- For login user -->
@@ -21,13 +44,13 @@
 		</script>
 
 		<c:if test="${pageContext.request.userPrincipal.name != null}">
-			<h2>
+			<h2 ALIGN=right>
 				User : ${pageContext.request.userPrincipal.name} | <a
 					href="javascript:formSubmit()"> Logout</a>
 			</h2>
 		</c:if>
 		
-		<form action="uploadFile?${_csrf.parameterName}=${_csrf.token}" method="POST" enctype="multipart/form-data">
+		<form action="uploadFile?${_csrf.parameterName}=${_csrf.token}" method="POST" enctype="multipart/form-data" id="form">
 			File to upload: <input type="file" name="file"><br /> 
 			<br /> 
 			<input type="submit" value="Upload">${message}

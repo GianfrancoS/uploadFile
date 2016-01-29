@@ -25,14 +25,55 @@
 }
 
 #login-box {
-	width: 300px;
+	width: px;
 	padding: 20px;
 	margin: 100px auto;
-	background: #fff;
+	background: #708090;
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	border: 1px solid #000;
 }
+
+	#user {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+    
+   #password {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+    
+   
+    
+    #submit {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+    }
+    
+    
+    
+    
+    
 </style>
 </head>
 <body onload='document.loginForm.username.focus();'>
@@ -55,19 +96,20 @@
 
 			<table>
 				<tr>
-					<td>User:</td>
+				
+					<td id="user">User:</td><td></td>
 					<td><input type='text' name='username'></td>
 				</tr>
+				
 				<tr>
-					<td>Password:</td>
+					<td id="password">Password:</td><td></td>
 					<td><input type='password' name='password' /></td>
 				</tr>
 				<tr>
-					<td colspan='2'><input name="submit" type="submit"
-						value="submit" /></td>
+					<td id="submit"><input name="submit" type="submit"
+						value="Submit" /></td><td></td>
 				</tr>
 			</table>
-
 			<input type="hidden" name="${_csrf.parameterName}"
 				value="${_csrf.token}" />
 
